@@ -1,0 +1,16 @@
+#!/home/skynet/my_project/plone.all_in_one_accessibility/venv/bin/python3
+
+import sys
+sys.path[0:0] = [
+  '/home/skynet/my_project/plone.all_in_one_accessibility/venv/lib/python3.10/site-packages',
+  '/home/skynet/my_project/plone.all_in_one_accessibility/eggs/i18ndude-6.0.0-py3.10.egg',
+  '/home/skynet/my_project/plone.all_in_one_accessibility/eggs/zope.tal-5.0.1-py3.10.egg',
+  '/home/skynet/my_project/plone.all_in_one_accessibility/eggs/zope.interface-6.0-py3.10-linux-x86_64.egg',
+  '/home/skynet/my_project/plone.all_in_one_accessibility/eggs/zope.i18nmessageid-6.0.1-py3.10-linux-x86_64.egg',
+  '/home/skynet/my_project/plone.all_in_one_accessibility/eggs/lxml-4.9.2-py3.10-linux-x86_64.egg',
+  ]
+
+import i18ndude.script
+
+if __name__ == '__main__':
+    sys.exit(i18ndude.script.main())

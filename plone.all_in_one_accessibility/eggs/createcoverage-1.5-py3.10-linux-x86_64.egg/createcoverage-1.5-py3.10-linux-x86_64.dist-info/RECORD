@@ -1,0 +1,17 @@
+../../bin/coverage,sha256=TY96tVnB5Evdzzg9UTpmezVcTj7MG8kDcS8cfKPUCxI,270
+../../bin/createcoverage,sha256=MqgHt0f-Y-P5xyhXaP52QzbJgnvL7SY7EVv4uwHpZvQ,275
+createcoverage-1.5.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+createcoverage-1.5.dist-info/LICENSE.txt,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+createcoverage-1.5.dist-info/METADATA,sha256=UDsqsDXwSEgkX97XzgsRhcBgcMT4sb8phuAlmuH4SmE,5842
+createcoverage-1.5.dist-info/RECORD,,
+createcoverage-1.5.dist-info/REQUESTED,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+createcoverage-1.5.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+createcoverage-1.5.dist-info/direct_url.json,sha256=rX1g0WDTSnGuiRBRXmKGc6FN7p7oSpYu7JaivPPA5Ec,259
+createcoverage-1.5.dist-info/entry_points.txt,sha256=yCmNVVN0fB166tquAAjsmjSXgw9-QXjBxGN0TKISlyk,95
+createcoverage-1.5.dist-info/top_level.txt,sha256=iR0eRWHo-v2qerO7G_UuGo4oJgSCCohh5HzpTsFl1Kg,15
+createcoverage/__init__.py,sha256=UnxmjVrk-eNORsitiM48W0pB6yfsaErOak8RYh_ELt8,10
+createcoverage/__pycache__/__init__.cpython-310.pyc,,
+createcoverage/__pycache__/script.cpython-310.pyc,,
+createcoverage/__pycache__/tests.cpython-310.pyc,,
+createcoverage/script.py,sha256=2xmSH_Kop8raRJdp-_62OqpSsjhOiQrIJT0MupzK3CI,3256
+createcoverage/tests.py,sha256=35XX6dQeP2O65yNF6J5uAPp_fuI76Ph_L1JgbEe3104,3556

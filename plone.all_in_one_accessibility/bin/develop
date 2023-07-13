@@ -1,0 +1,13 @@
+#!/home/skynet/my_project/plone.all_in_one_accessibility/venv/bin/python3
+
+import sys
+sys.path[0:0] = [
+  '/home/skynet/my_project/plone.all_in_one_accessibility/venv/lib/python3.10/site-packages',
+  '/home/skynet/my_project/plone.all_in_one_accessibility/eggs/mr.developer-2.0.1-py3.10.egg',
+  '/home/skynet/my_project/plone.all_in_one_accessibility/eggs/six-1.16.0-py3.10.egg',
+  ]
+
+import mr.developer.develop
+
+if __name__ == '__main__':
+    sys.exit(mr.developer.develop.develop())

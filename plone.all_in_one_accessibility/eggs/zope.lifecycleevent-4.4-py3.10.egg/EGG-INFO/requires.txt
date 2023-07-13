@@ -1,0 +1,13 @@
+setuptools
+zope.interface
+zope.event
+
+[docs]
+repoze.sphinx.autointerface
+sphinx-rtd-theme
+
+[test]
+zope.component
+zope.configuration
+zope.testing
+zope.testrunner

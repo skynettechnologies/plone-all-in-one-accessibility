@@ -1,0 +1,15 @@
+setuptools
+ZODB
+zope.component
+zope.i18nmessageid
+zope.interface
+zope.schema
+
+[docs]
+repoze.sphinx.autointerface
+Sphinx
+sphinx-rtd-theme
+
+[test]
+zope.testing
+zope.testrunner
