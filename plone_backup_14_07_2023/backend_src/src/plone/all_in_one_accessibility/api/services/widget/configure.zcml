@@ -1,0 +1,21 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:plone="http://namespaces.plone.org/plone">
+
+  <!-- <adapter factory=".get.Widget" name="widget"/> -->
+
+  <plone:service
+    method="GET"
+    accept="application/json"
+    for="zope.interface.Interface"
+    factory=".get.WidgetGet"
+    name="@widget"
+    permission="zope2.View"
+    />
+  <plone:CORSPolicy
+    allow_origin="*"
+    allow_methods="GET"
+    expose_headers="X-My-Header"
+    />
+
+</configure>

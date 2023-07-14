@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<rolemap>
+  <permissions>
+  <!-- -*- extra stuff goes here -*- -->
+
+    <permission name="plone.all_in_one_accessibility: Add AllInOneAccessibilitySetting" acquire="True">
+      <role name="Manager"/>
+      <role name="Site Administrator"/>
+      <role name="Owner"/>
+      <role name="Contributor"/>
+      <role name="Anonymous"/>
+      <role name="Authenticated"/>
+      <role name="Editor"/>
+      <role name="Member"/>
+      <role name="Reviewer"/>
+      <role name="Reader"/>
+    </permission>
+
+    <permission name="plone.all_in_one_accessibility: View AllInOneAccessibilitySetting" acquire="True">
+      <role name="Manager"/>
+      <role name="Site Administrator"/>
+      <role name="Owner"/>
+      <role name="Contributor"/>
+      <role name="Anonymous"/>
+      <role name="Authenticated"/>
+      <role name="Editor"/>
+      <role name="Member"/>
+      <role name="Reviewer"/>
+      <role name="Reader"/>
+    </permission>
+
+
+  </permissions>
+</rolemap>
