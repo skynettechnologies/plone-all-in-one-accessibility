@@ -1,0 +1,51 @@
+<div class="mb-3 field fieldname-form.widgets.aioa_icon_type widget-mode-input False" id="formfield-form-widgets-aioa_icon_type" data-fieldname="form.widgets.aioa_icon_type" style="display: block;">
+  <label class="form-label" for="form-widgets-aioa_icon_type">
+    Icon Type
+
+    
+  </label>
+  
+
+  
+  <div class="form-check">
+    
+  <input class="form-check-input radio-widget choice-field" id="form-widgets-aioa_icon_type-0" name="form.widgets.aioa_icon_type" type="radio" value="aioa-icon-type-1" checked="checked">
+
+
+    <label class="form-check-label" for="form-widgets-aioa_icon_type-0"><img src="https://www.skynettechnologies.com/sites/default/files/python/aioa-icon-type-1.svg" width="55" height="55"></label>
+  </div>
+  <div class="form-check">
+    
+  <input class="form-check-input radio-widget choice-field" id="form-widgets-aioa_icon_type-1" name="form.widgets.aioa_icon_type" type="radio" value="aioa-icon-type-2">
+
+
+    <label class="form-check-label" for="form-widgets-aioa_icon_type-1"><img src="https://www.skynettechnologies.com/sites/default/files/python/aioa-icon-type-2.svg" width="55" height="55"></label>
+  </div>
+  <div class="form-check">
+    
+  <input class="form-check-input radio-widget choice-field" id="form-widgets-aioa_icon_type-2" name="form.widgets.aioa_icon_type" type="radio" value="aioa-icon-type-3">
+
+
+    <label class="form-check-label" for="form-widgets-aioa_icon_type-2"><img src="https://www.skynettechnologies.com/sites/default/files/python/aioa-icon-type-3.svg" width="55" height="55"></label>
+  </div>
+  <input name="form.widgets.aioa_icon_type-empty-marker" type="hidden" value="1">
+
+
+
+  <div class="form-text"><script>
+
+        var element = document.querySelectorAll('input[name="form.widgets.aioa_icon_type"]');
+        var total = 0
+     
+        for( var img of element) {
+            total += 1
+            const next = img.nextElementSibling;
+            
+            next.innerHTML= '<img src="https://www.skynettechnologies.com/sites/default/files/python/aioa-icon-type-'+total+'.svg" width="55" height="55"/>'
+        }
+
+</script></div>
+
+  
+
+</div>
