@@ -1,5 +1,0 @@
-setuptools
-Zope
-
-[test]
-plone.testing[zca]

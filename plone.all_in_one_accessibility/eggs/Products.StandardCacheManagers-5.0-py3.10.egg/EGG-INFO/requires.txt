@@ -1,5 +1,0 @@
-setuptools
-AccessControl
-transaction
-Zope>5
-zope.component

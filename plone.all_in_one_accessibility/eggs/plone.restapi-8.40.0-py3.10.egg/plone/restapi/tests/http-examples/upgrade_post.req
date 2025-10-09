@@ -1,8 +1,0 @@
-POST /plone/@upgrade HTTP/1.1
-Accept: application/json
-Authorization: Basic YWRtaW46Y29ycmVjdCBob3JzZSBiYXR0ZXJ5IHN0YXBsZQ==
-Content-Type: application/json
-
-{
-    "dry_run": false
-}

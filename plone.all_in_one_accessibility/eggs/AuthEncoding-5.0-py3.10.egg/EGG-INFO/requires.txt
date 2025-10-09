@@ -1,6 +1,0 @@
-
-[bcrypt]
-bcrypt
-
-[test]
-pytest

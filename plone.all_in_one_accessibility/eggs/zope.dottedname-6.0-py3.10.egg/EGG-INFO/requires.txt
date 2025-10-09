@@ -1,6 +1,0 @@
-setuptools
-
-[docs]
-Sphinx
-
-[testing]

@@ -1,1 +1,0 @@
-/home/skynet/my_project/plone.all_in_one_accessibility/eggs/decorator-5.1.1-py3.10.egg/decorator.py

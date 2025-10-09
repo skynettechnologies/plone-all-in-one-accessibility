@@ -1,7 +1,0 @@
-attrs>=19.2.0
-sortedcontainers
-async-generator>=1.9
-idna
-outcome
-sniffio
-exceptiongroup>=1.0.0rc9

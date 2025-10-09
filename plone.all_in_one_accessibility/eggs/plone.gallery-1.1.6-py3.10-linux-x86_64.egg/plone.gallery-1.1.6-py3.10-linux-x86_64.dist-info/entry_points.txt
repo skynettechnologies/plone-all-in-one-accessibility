@@ -1,5 +1,0 @@
-[console_scripts]
-update_locale = plone.gallery.locales.update:update_locale
-
-[z3c.autoinclude.plugin]
-target = plone

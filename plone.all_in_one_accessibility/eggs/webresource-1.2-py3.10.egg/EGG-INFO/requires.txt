@@ -1,7 +1,0 @@
-
-[docs]
-Sphinx
-sphinx-conestack-theme
-
-[test]
-coverage

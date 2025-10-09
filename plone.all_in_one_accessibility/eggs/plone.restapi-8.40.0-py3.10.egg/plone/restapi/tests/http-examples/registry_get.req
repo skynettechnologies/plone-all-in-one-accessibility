@@ -1,3 +1,0 @@
-GET /plone/@registry/plone.app.querystring.field.path.title HTTP/1.1
-Accept: application/json
-Authorization: Basic YWRtaW46c2VjcmV0

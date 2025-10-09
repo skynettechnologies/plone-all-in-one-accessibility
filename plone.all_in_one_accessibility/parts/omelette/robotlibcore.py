@@ -1,1 +1,0 @@
-/home/skynet/my_project/plone.all_in_one_accessibility/eggs/robotframework_pythonlibcore-4.1.2-py3.10.egg/robotlibcore.py

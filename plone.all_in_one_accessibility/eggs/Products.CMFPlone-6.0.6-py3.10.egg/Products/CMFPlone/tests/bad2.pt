@@ -1,2 +1,0 @@
-Hello <span tal:define="string python:modules['string']"
-            tal:content="string/_re/purge" />.

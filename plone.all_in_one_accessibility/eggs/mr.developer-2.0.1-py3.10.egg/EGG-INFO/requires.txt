@@ -1,6 +1,0 @@
-setuptools
-zc.buildout
-six
-
-[test]
-mock

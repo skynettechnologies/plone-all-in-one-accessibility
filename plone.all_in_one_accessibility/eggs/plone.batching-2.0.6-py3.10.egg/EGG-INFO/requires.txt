@@ -1,9 +1,0 @@
-AccessControl
-setuptools
-Zope
-zope.interface
-zope.schema
-
-[test]
-zope.component
-zope.publisher

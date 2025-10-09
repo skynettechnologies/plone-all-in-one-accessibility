@@ -1,6 +1,0 @@
-[zc.buildout]
-default = collective.recipe.vscode:Recipe
-
-[zc.buildout.uninstall]
-default = collective.recipe.vscode:uninstall
-

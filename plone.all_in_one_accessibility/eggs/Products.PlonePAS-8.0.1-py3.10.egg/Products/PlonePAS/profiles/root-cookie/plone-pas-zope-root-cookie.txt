@@ -1,2 +1,0 @@
-Change the Zope root `/acl_users` to use a simple cookie login form instead of HTTP
-`Basic ...` for authentication.
