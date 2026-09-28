@@ -3,12 +3,33 @@
     xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:plone="http://namespaces.plone.org/plone">
 
+  <!--
+    The actual public-facing accessibility widget. Registered on
+    IHtmlHeadLinks (present on every rendered page) so the <script> tag
+    this emits is requested regardless of which page a visitor lands on;
+    this is the piece that was previously missing entirely, see
+    viewlets.AccessibilityWidgetViewlet's docstring.
+  -->
+  <browser:viewlet
+      name="plone.aioa.widget"
+      manager="plone.app.layout.viewlets.interfaces.IHtmlHeadLinks"
+      class=".viewlets.AccessibilityWidgetViewlet"
+      permission="zope2.View"
+      layer="plone.all_in_one_accessibility.interfaces.IPloneAllInOneAccessibilityLayer"
+      />
+
+  <!--
+    Admin-only: styles/enhances the "All in One Accessibility Setting"
+    add/edit form. Restricted to that content type's own views inside
+    AccessibilityCSSViewlet.available(), so this renders as an empty
+    string (no markup, no extra requests) everywhere else.
+  -->
   <browser:viewlet
       name="plone.aioa.customcss"
       manager="plone.app.layout.viewlets.interfaces.IHtmlHeadLinks"
       class=".viewlets.AccessibilityCSSViewlet"
       permission="zope2.View"
       layer="plone.all_in_one_accessibility.interfaces.IPloneAllInOneAccessibilityLayer"
-  />
+      />
 
 </configure>

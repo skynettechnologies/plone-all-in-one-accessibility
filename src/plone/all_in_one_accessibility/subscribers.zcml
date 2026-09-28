@@ -1,16 +1,9 @@
 <configure
     xmlns="http://namespaces.zope.org/zope">
 
-  <subscriber
-      for="plone.all_in_one_accessibility.content.all_in_one_accessibility_setting.IAllInOneAccessibilitySetting
-           zope.lifecycleevent.interfaces.IObjectAddedEvent"
-      handler=".subscribers.send_to_external_api_on_add" />
-
-  <subscriber
-      for="plone.all_in_one_accessibility.content.all_in_one_accessibility_setting.IAllInOneAccessibilitySetting
-           zope.lifecycleevent.interfaces.IObjectModifiedEvent"
-      handler=".subscribers.send_to_external_api_on_edit" />
-
+  <!-- The Skynet API calls happen in the browser, not here: see
+       browser/static/aioa_skynet_sync.js. Only the singleton handling
+       is a server-side subscriber. -->
 
   <subscriber
     for="plone.all_in_one_accessibility.content.all_in_one_accessibility_setting.IAllInOneAccessibilitySetting

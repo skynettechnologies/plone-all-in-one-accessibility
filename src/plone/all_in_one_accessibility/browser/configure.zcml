@@ -34,6 +34,15 @@
     permission="cmf.AddPortalContent"
   />
 
+  <!-- Manager-only: shows what is sent to / returned by Skynet's API. -->
+  <browser:page
+    name="aioa-diagnose"
+    for="*"
+    class=".diagnose.AioaDiagnoseView"
+    permission="cmf.ManagePortal"
+    layer="plone.all_in_one_accessibility.interfaces.IPloneAllInOneAccessibilityLayer"
+    />
+
   <browser:page
     name="edit"
     for="Products.CMFPlone.interfaces.IPloneSiteRoot"

@@ -18,8 +18,17 @@
   <property name="link_target"></property>
 
   <!-- Hierarchy control -->
+  <!-- Must stay True: plone.dexterity.browser.add.DefaultAddForm.update()
+       checks context.allowedContentTypes(), which is itself driven by
+       global_allow. Setting this False blocks the ++add++ traversal
+       with "Subobject type disallowed by IConstrainTypes adapter",
+       breaking the redirect-to-add flow used by the "edit" view and by
+       the new Add-on Configuration entry. It still won't clutter the
+       "Add new..." menu in practice: subscribers.disable_add_after_creation
+       (referenced by get_widget_settings' docstring) blocks a second
+       object once one exists, and there is now a normal way to reach
+       settings via Add-on Configuration regardless. -->
   <property name="global_allow">True</property>
-  <!-- <property name="global_allow">False</property> -->
   <!-- Schema, class and security -->
   <property name="add_permission">plone.all_in_one_accessibility.AddAllInOneAccessibilitySetting</property>
   <property name="klass">plone.all_in_one_accessibility.content.all_in_one_accessibility_setting.AllInOneAccessibilitySetting</property>

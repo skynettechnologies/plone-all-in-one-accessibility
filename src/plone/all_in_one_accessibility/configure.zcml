@@ -4,6 +4,7 @@
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:i18n="http://namespaces.zope.org/i18n"
     xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
     i18n_domain="plone.all_in_one_accessibility">
 
   <i18n:registerTranslations directory="locales" />
@@ -43,9 +44,22 @@
 
   <!-- -*- extra stuff goes here -*- -->
 
-  <include package=".api" />
-
-  <include package=".api" />
+  <!--
+    api/services/widget/get.py imports plone.restapi.services.Service.
+    plone.restapi is NOT one of this add-on's hard install_requires
+    (classic, non-Volto sites often don't have it installed at all);
+    previously this include package=".api" ran unconditionally,
+    so on a site without plone.restapi the ENTIRE package failed to
+    load at Zope startup with an ImportError, taking this whole add-on
+    (including the viewlets that render the widget) down with it. That
+    is very likely why "the module is not working" beyond just the
+    widget being invisible. Guarding it means the REST endpoint is
+    simply absent on sites without plone.restapi, instead of the whole
+    add-on refusing to load.
+  -->
+  <configure zcml:condition="installed plone.restapi">
+    <include package=".api" />
+  </configure>
 
   <utility
     name="plone.all_in_one_accessibility.icon_vocabulary"

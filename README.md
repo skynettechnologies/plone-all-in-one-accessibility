@@ -130,70 +130,59 @@ For more details, visit **[All in One Accessibility®](https://www.skynettechnol
 
 English (USA), English (UK), English (Australian), English (Canadian), English (South Africa), Español, Español (Mexicano), Deutsch, عربى, Português, Português (Brazil), 日本語, Français, Italiano, Polski, Pусский, 中文, 中文 (Traditional), עִברִית, Magyar, Slovenčina, Suomenkieli, Türkçe, Ελληνικά, Latinus, Български, Català, Čeština, Dansk, Nederlands, हिंदी, Bahasa Indonesia, 한국인, Lietuvių, Bahasa Melayu, Norsk, Română, Slovenščina, Svenska, แบบไทย, Українська, Việt Nam, বাঙালি, සිංහල, አማርኛ, Hmoob, မြန်မာ, Eesti keel, latviešu, Cрпски, Hrvatski, ქართული, ʻŌlelo Hawaiʻi, Cymraeg, Cebuano, Samoa, Kreyòl ayisyen, Føroyskt, Crnogorski, Azerbaijani, Euskara, Tagalog, Galego, Norsk Bokmål, فارسی, ਪੰਜਾਬੀ, shqiptare, Hայերեն, অসমীয়া, Aymara, Bamanankan, беларускі, bosanski, Corsu, ދިވެހި, Esperanto, Eʋegbe, Frisian, guarani, ગુજરાતી, Hausa, íslenskur, Igbo, Gaeilge, basa jawa, ಕನ್ನಡ, қазақ, ខ្មែរ, Kinyarwanda, Kurdî, Кыргызча, ພາສາລາວ, Lingala, Luganda, lëtzebuergesch, македонски, Malagasy, മലയാളം, Malti, Maori, मराठी, Монгол, नेपाली, Sea, ଓଡିଆ, Afaan Oromoo, پښتو, Runasimi, संस्कृत, Gàidhlig na h-Alba, Sesotho, Shona, سنڌي, Soomaali, basa Sunda, kiswahili, тоҷикӣ, தமிழ், Татар, తెలుగు, ትግሪኛ, Tsonga, Türkmenler, Ride, اردو, ئۇيغۇر, o'zbek, isiXhosa, יידיש, Yoruba, Zulu, भोजपुरी, डोगरी, कोंकणी, Kurdî, Krio, मैथिली, Meiteilon, Mizo tawng, Sepedi, Ilocano, دری.
 
+
+#### You can use this package in Plone
+---
+
 ## Installation
-### 1. Prerequisites
 
-Before proceeding, ensure you have:
-
-- Python **3.11**
-- Plone **6.1.2** 
-
-If Plone is not yet installed, follow the [official guide](https://6.docs.plone.org/admin-guide/install-pip.html).
+- Add `plone.all_in_one_accessibility` to the `eggs` of your instance in `buildout.cfg` (or run `pip install plone.all_in_one_accessibility` for a pip-based install)
+- Run `bin/buildout` (buildout installs only)
+- Restart your Plone instance
+- Go to **Site Setup → Add-ons** and click **Install** next to `plone.all_in_one_accessibility`
+- Go to **Site Setup → Add-on Configuration → All in One Accessibility**, set your widget options and click **Save**
 
 ---
 
-### 2. Install the Add-on Using pip
+## Usage
 
-    pip install plone.all_in_one_accessibility
-
+## Steps for Plone
 ---
 
-### 3. Run Your Plone Site
-Start Plone using WSGI:
+### Buildout.cfg
+Just add `plone.all_in_one_accessibility` in to the eggs of your instance:
 
-    runwsgi -v instance/etc/zope.ini
-Then open your browser:
+```ini
+[buildout]
+parts =
+    instance
 
-    http://localhost:8080
----
+[instance]
+recipe = plone.recipe.zope2instance
+eggs =
+    Plone
+    plone.all_in_one_accessibility
+```
 
-### 4. Install the Add-on in Plone UI
+### Buildout
+Run buildout (skip this step for a pip-based install):
+```bash
+bin/buildout
+```
 
-After starting your Plone site:
+### Restart
+Restart your Plone instance:
+```bash
+bin/instance fg
+```
 
-- Log in using your Zope/Plone admin credentials
-- Go to: **⚙️ Site Setup** → **Add-ons**
-- Find `plone.all_in_one_accessibility` in the list
-- Click **Install** to activate it
----
+### Install Add-on
+Log in as a Manager or Site Administrator, go to **Site Setup → Add-ons** and click **Install** next to `plone.all_in_one_accessibility`.
 
-### 5. Configure the Accessibility Widget
+### Save Settings
+Go to **Site Setup → Add-on Configuration → All in One Accessibility** (or open `<your-site-url>/edit`), set your widget options and click **Save**. The widget is loaded on every page automatically; no template changes are needed.
 
-Once installed:
-
-- Go to the **Sidebar Menu**
-- Click **Add New** → **All-in-One Accessibility Setting**
-- Fill in the form:
-  - Widget color (Hex value, e.g., `#007BFF`)
-  - Icon Position (e.g., `bottom_left`, `top_right`)
-  - Icon Size or custom pixel value
-- Click **Save**
----
-
-### 6. Frontend Integration
-You can call the backend API from your frontend footer component to dynamically load the widget.
-
-    Example.
-        ...
-            const requestOptions = {
-            method: 'GET',
-            headers: {"Accept":"application/json" },
-            redirect: 'follow',
-            mode:'no-cors',
-                
-            };
-            
-            const requestURL = `<your domain>/Plone/all-in-one-accessibility-setting/@widget`;
+> **Note:** Your site must be reachable on a real hostname. `localhost` cannot be registered with Skynet, so widget settings will not apply there.
 
 ## CORS Policy Configuration
 
@@ -299,5 +288,3 @@ This addon is developed and maintained by **[Skynet Technologies USA LLC](https:
 ## License
 
 [MIT](LICENSE) © Skynet Technologies USA LLC
-    
-

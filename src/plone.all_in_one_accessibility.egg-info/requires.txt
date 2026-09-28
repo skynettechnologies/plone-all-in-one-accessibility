@@ -2,9 +2,7 @@ setuptools
 z3c.jbot
 plone.api
 plone.app.dexterity
+plone.autoform
 
-[test]
-plone.app.testing
-plone.testing>=5.0.0
-plone.app.contenttypes
-plone.app.robotframework[debug]
+[restapi]
+plone.restapi

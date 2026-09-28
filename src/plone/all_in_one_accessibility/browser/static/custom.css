@@ -1,3 +1,37 @@
+/* Static upgrade notice injected by aioa_skynet_sync.js
+   (insertUpgradeNotice): fixed Pro/10-day-trial message + cache note --
+   same copy as the plone module's banner. Always shown, independent
+   of the Skynet API. */
+.aioa-upgrade-notice {
+  margin: 0 0 20px;
+  padding: 12px 16px;
+  border: 1px solid #e6ddf7;
+  border-left: 4px solid #9b6dff;
+  border-radius: 4px;
+  background-color: #f7f4fd;
+}
+
+.aioa-upgrade-notice p {
+  margin: 0 0 6px;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.aioa-upgrade-notice p:last-child {
+  margin-bottom: 0;
+}
+
+.aioa-upgrade-notice-message a {
+  color: #6a3fc0;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.aioa-upgrade-notice-cache-note {
+  color: #5a5a5a;
+  opacity: 0.9;
+}
+
 .inline-field-row {
   display: flex;
   gap: 20px;

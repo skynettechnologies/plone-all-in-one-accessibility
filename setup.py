@@ -9,18 +9,17 @@ long_description = '\n\n'.join([
     open('README.md', encoding='utf-8').read(),
 ])
 
-
-
 setup(
     name='plone.all_in_one_accessibility',
-    version='2.0.0',
-    description="An add-on for Plone",
+    version='2.1.0',
+    description="Website accessibility widget for improving WCAG 2.0, 2.1, 2.2 and ADA compliance!",
     long_description=long_description,
+    long_description_content_type='text/markdown',
     classifiers=[
         "Environment :: Web Environment",
         "Framework :: Plone",
         "Framework :: Plone :: Addon",
-        "Framework :: Plone :: 6.1.2",
+        "Framework :: Plone :: 6.0",
         "Programming Language :: Python",
         "Programming Language :: Python :: 3.11",
         "Operating System :: OS Independent",
@@ -37,20 +36,22 @@ setup(
     package_dir={'': 'src'},
     include_package_data=True,
     zip_safe=False,
-    python_requires=">=3.11, <3.12",
+    python_requires=">=3.9",
     install_requires=[
         'setuptools',
         # -*- Extra requirements: -*-
         'z3c.jbot',
         'plone.api',
         'plone.app.dexterity',
+        'plone.autoform',
     ],
     extras_require={
-        'test': [
-            'plone.app.testing',
-            'plone.testing>=5.0.0',
-            'plone.app.contenttypes',
-            'plone.app.robotframework[debug]',
+        # Only needed for the optional @widget REST endpoint under
+        # api/services/widget/get.py; configure.zcml only loads that
+        # package when plone.restapi is present, so it is intentionally
+        # NOT in install_requires -- see configure.zcml.
+        'restapi': [
+            'plone.restapi',
         ],
     },
     entry_points="""
